@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BanyuwangiJourney</title>
+    <link rel="stylesheet" href="beranda.css">
+    {{-- link font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="judul">
+        <h1>BANYUWANGI JOURNEY</h1>
+        <p>KENALI DAN JELAJAHI BANYUWANGI</p>
+    </div>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('images/img1.jpg')">
+                <div class="content">
+                    <h2>Kesenian</h2>
+                    <p>Gandrung</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('images/img2.jpg')">
+                <div class="content">
+                    <h2>Wisata</h2>
+                    <p>Kawah Ijen</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('images/img3.jpg')">
+                <div class="content">
+                    <h2>Kebudayaan</h2>
+                    <p>Seblang</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('images/img4.jpg')">
+                <div class="content">
+                    <h2>Karya Seni</h2>
+                    <p>Batik Gajah Oling</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('images/img5.jpg')">
+                <div class="content">
+                    <h2>Kuliner</h2>
+                    <p>Kue Klemben</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next "></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector(".next");
+        let prev = document.querySelector(".prev");
+        let slider = document.querySelector(".slider");
+
+        next.addEventListener('click', function() {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+
+        prev.addEventListener('click', function() {
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+    </script>
+</body>
+
+</html>
