@@ -12,26 +12,29 @@
 }
 
 body {
+    position: relative;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-    background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
-    background-size: cover; /* Agar background menutupi seluruh area */
-    background-position: center; /* Posisikan background di tengah */
-    background-repeat: no-repeat; /* Mencegah pengulangan background */
-    background-color: #111;
+    background-color: #111; /* Hanya warna latar belakang */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
 }
 
 /* style judul */
 .judul {
     position: relative;
     padding: 40px;
-    margin-left: 40px;
-    height: 100vh; /* Membuat judul memenuhi tinggi layar */
+    margin-left: 0; /* Margin kiri dihilangkan agar tidak ada ruang kosong */
+    width: 100vw; /* Lebar 100% dari viewport */
+    height: 100vh; /* Tinggi 100% dari viewport */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Menempatkan judul dan teks di tengah secara vertikal */
     align-items: flex-start; /* Menempatkan elemen di sebelah kiri */
+    background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
+    background-size: cover; /* Agar background menutupi seluruh area */
+    background-position: center; /* Posisikan background di tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan background */
 }
 
 .judul h1 {
@@ -43,14 +46,20 @@ body {
 
 .judul p {
     position: relative;
-    font-size: 23px;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    bottom: 50px;
+    color: #fff;
+    bottom: 10px;
+}
+
+.bawah {
+    background-color: #111; /* Warna latar belakang bagian bawah */
+    padding: 20px;
     color: #fff;
 }
 /* style slider */
 .container {
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -115,10 +124,11 @@ body {
 }
 
 .buttons {
-    position: flex;
-    transform: translateY(350px);
+    position: relative;
+    transform: translateY(360px);
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .buttons span {
@@ -165,10 +175,16 @@ body {
 .content h2 {
     font-size: 4em;
     color: #fff;
+    font-weight: 500;
+    font-family: 'Noto Serif', serif;
 }
 
 .content p {
+    position: relative;
     color: #fff;
+    font-weight: 500;
+    bottom: 15px;
+    left: 5px;
 }
 
 .slider .slides:nth-child(1) .content,
@@ -177,6 +193,95 @@ body {
     transform: translateY(0px);
     transition-delay: 0.5s;
 }
+
+/* style map */
+
+.map-container {
+    top: 150px;
+    left: 150px;
+    position: relative;
+}
+
+
+svg {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+path {
+    fill: #443d4b;
+    stroke: #dcbfff;
+    transition: fill 100ms ease-in-out;
+}
+
+path:hover {
+    fill: #c99aff;
+    cursor: pointer;
+}
+.judul-peta {
+    color: #fff;
+    font-size: 70px;
+    position: relative;
+    left: 660px;
+    bottom: 300px;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Gaya card */
+.info-card {
+    padding: 20px;
+    background-color: rgba(68, 61, 75, 0.368); /* Lebih transparan untuk integrasi yang lebih halus dengan map */
+    box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2); /* Lebih gelap agar lebih menonjol */
+    border-radius: 15px;
+    display: none; /* Awalnya disembunyikan */
+    position: relative; /* Mengubah posisi menjadi relative */
+    margin: 50px auto; /* Menggunakan margin otomatis agar berada di tengah secara horizontal */
+    max-width: 600px; /* Lebar maksimum card */
+    color: #fff;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    left: 200px;
+    bottom: 340px;
+}
+
+/* Mengatur posisi tombol close */
+.close-btn {
+    position: absolute; /* Ubah posisi menjadi absolute */
+    top: 10px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    background-color: transparent; /* Transparan untuk tampilan yang lebih bersih */
+    color: #fff; /* Warna tombol */
+    border: none; /* Menghilangkan border */
+    font-size: 24px; /* Ukuran font yang lebih besar untuk tombol */
+    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+}
+
+.close-btn:hover {
+    color: rgba(255, 0, 0, 0.8); /* Mengubah warna saat hover */
+}
+
+.info-card.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    margin-bottom: 15px;
+}
+
 
 /* tampilan mobile */
 
