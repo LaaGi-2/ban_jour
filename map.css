@@ -1,73 +1,162 @@
-/* style map */ 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    box-sizing: border-box;
+}
 
 body {
-    font-family: sans-serif;
-    background-color: #111;
-}
-
-.map-container {
-    top: 150px;
-    left: 150px;
-    position: absolute;
-}
-
-
-svg {
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-
-path {
-    fill: #443d4b;
-    stroke: #dcbfff;
-    transition: fill 100ms ease-in-out;
-}
-
-path:hover {
-    fill: #c99aff;
-    cursor: pointer;
-}
-
- /* Gaya card */
- .info-card {
-    width: 300px;
-    padding: 50px 350px 50px 50px;
-    background-color: #443d4b78;
-    box-shadow: 0 4px 8px rgba(232, 232, 232, 0.279);
-    margin-left: 20px;
-    border-radius: 50px;
-    display: none; /* Awalnya disembunyikan */
-    position: relative;
-    top: 200px;
-    left: 600px;
+    background: #1e1f21;
     color: #fff;
-    transition: fill 100ms ease-in-out;
 }
 
-.info-card h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.wrapper {
+    padding: 10px 10%;
+    text-align: center;
 }
 
-.info-card ul {
-    list-style-type: none;
-    padding: 0;
+#card-area {
+    padding: 50px 0;
 }
 
-.info-card ul li {
-    margin-bottom: 15px;
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your needs */
+    grid-gap: 40px; /* Tidak ada gap */
+    margin-top: 30px; /* Margin top untuk jarak atas */
+    padding:100px;
 }
 
-/* Tombol Tutup */
-.close-btn {
+/* Variasi Box */
+
+/* Box Besar */
+.box-large {
+    grid-column: span 2; /* Memperpanjang 2 kolom */
+    grid-row: span 2; /* Memperpanjang 2 baris */
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Sedang */
+.box-medium {
+    grid-column: span 1;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Kecil */
+.box-small {
+    grid-column: span 1;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Panjang */
+.box-wide {
+    grid-column: span 2;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* BOX LANDSCAPE */
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+/* BOX PORTRAIT */
+.box-potrait {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+.box img {
+    width: 100%;
+    height: 100%; /* Mengatur tinggi otomatis untuk gambar */
+    display: block;
+    object-fit: cover; /* Cropping the image to fit the box */
+    transition: transform 0.5s;
+}
+
+/* Image inside Potrait Box */
+.box-potrait img {
+    width: 100%;
+    height: 100%; /* Mengatur tinggi otomatis untuk gambar potrait */
+    display: block;
+    object-fit: cover; /* This ensures the landscape image is cropped to fit portrait box */
+    transition: transform 0.5s;
+}
+
+.overlay {
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(transparent,#1c1c1c 58%);
+    border-radius: 10px;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: red;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+}
+.overlay h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 20%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan tulisan */
+}
+
+.overlay p {
+    margin: 10px;
+    font-size: 12px;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 50px;
+}
+
+/* Menyesuaikan overlay untuk box-medium */
+.box-medium .overlay h3 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-top: 10%; /* Sesuaikan margin atas */
+}
+
+.box-medium .overlay p {
+    font-size: 13px; /* Ukuran font untuk deskripsi */
+    margin: 5px 10px; /* Sesuaikan margin */
+}
+
+.box-medium .overlay a {
+    font-size: 12px; /* Ukuran font untuk link */
+    padding: 4px 10px; /* Sesuaikan padding */
+}
+
+
+/* Hover Effects */
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box-potrait:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover .overlay, .box-potrait:hover .overlay {
+    height: 100%;
 }

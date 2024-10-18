@@ -16,31 +16,41 @@ body {
     margin: 0;
     padding-bottom: 100px;
     box-sizing: border-box;
-    background-color: #111; /* Hanya warna latar belakang */
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #111;
+    /* Hanya warna latar belakang */
+    overflow-x: hidden;
+    /* Mencegah scroll horizontal */
 }
 
 /* style judul */
 .judul {
     position: relative;
     padding: 40px;
-    margin-left: 0; /* Margin kiri dihilangkan agar tidak ada ruang kosong */
-    width: 100vw; /* Lebar 100% dari viewport */
-    height: 100vh; /* Tinggi 100% dari viewport */
+    margin-left: 0;
+    /* Margin kiri dihilangkan agar tidak ada ruang kosong */
+    width: 100vw;
+    /* Lebar 100% dari viewport */
+    height: 100vh;
+    /* Tinggi 100% dari viewport */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Menempatkan judul dan teks di tengah secara vertikal */
-    align-items: flex-start; /* Menempatkan elemen di sebelah kiri */
+    justify-content: center;
+    /* Menempatkan judul dan teks di tengah secara vertikal */
+    align-items: flex-start;
+    /* Menempatkan elemen di sebelah kiri */
     background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
-    background-size: cover; /* Agar background menutupi seluruh area */
-    background-position: center; /* Posisikan background di tengah */
-    background-repeat: no-repeat; /* Mencegah pengulangan background */
+    background-size: cover;
+    /* Agar background menutupi seluruh area */
+    background-position: center;
+    /* Posisikan background di tengah */
+    background-repeat: no-repeat;
+    /* Mencegah pengulangan background */
 }
 
 .judul h1 {
     position: relative;
     font-size: 50px;
-    font-family:  'Noto Serif', serif;
+    font-family: 'Noto Serif', serif;
     color: #fff;
 }
 
@@ -53,10 +63,12 @@ body {
 }
 
 .bawah {
-    background-color: #111; /* Warna latar belakang bagian bawah */
+    background-color: #111;
+    /* Warna latar belakang bagian bawah */
     padding: 20px;
     color: #fff;
 }
+
 /* style slider */
 .container {
     position: relative;
@@ -70,10 +82,10 @@ body {
 
 .slider {
     position: absolute;
-    inset: 80px 200px 80px 80px;
-    background-color: #ccc;
+    inset: 120px 300px 120px 120px;
+    background-color: #cccccc54;
     border-radius: 20px;
-    box-shadow: 0 2px 50px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 50px rgba(116, 116, 116, 0.562);
 
 }
 
@@ -88,7 +100,7 @@ body {
     background-size: cover;
     border-radius: 20px;
     transition: 0.5s;
-    box-shadow: 0 25px 50px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 50px rgba(116, 116, 116, 0.562);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -168,7 +180,7 @@ body {
     transition: 0.25s;
     transition-delay: 0s;
     transform: translateY(40px);
-    z-index: 10000;
+    z-index: 1;
     opacity: 0;
 }
 
@@ -195,18 +207,16 @@ body {
 }
 
 /* style map */
-
-.map-container {
-    top: 150px;
-    left: 150px;
+.banyuwangi-map {
     position: relative;
 }
 
-
-svg {
+.banyuwangi-map svg {
     position: relative;
     width: 500px;
     height: 500px;
+    top: 150px;
+    left: 150px;
 }
 
 path {
@@ -219,12 +229,13 @@ path:hover {
     fill: #c99aff;
     cursor: pointer;
 }
-.judul-peta {
-    color: #fff;
+
+.judul-peta h1{
+    color: #ffc400; /* Warna judul */
     font-size: 70px;
     position: relative;
     left: 660px;
-    bottom: 300px;
+    bottom: 350px;
     font-weight: 500;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -232,45 +243,52 @@ path:hover {
 /* Gaya card */
 .info-card {
     padding: 20px;
-    background-color: rgba(68, 61, 75, 0.368); /* Lebih transparan untuk integrasi yang lebih halus dengan map */
-    box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2); /* Lebih gelap agar lebih menonjol */
+    background-color: rgba(68, 61, 75, 0.368);
+    box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2);
     border-radius: 15px;
-    display: none; /* Awalnya disembunyikan */
-    position: relative; /* Mengubah posisi menjadi relative */
-    margin: 50px auto; /* Menggunakan margin otomatis agar berada di tengah secara horizontal */
-    max-width: 600px; /* Lebar maksimum card */
+    display: none;
+    position: relative; /* Menjadikan posisi elemen relatif agar tombol bisa diposisikan absolut di dalamnya */
+    max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 999;
-    left: 200px;
-    bottom: 340px;
+    left: 650px;
+    margin-top: -350px;
 }
 
-/* Mengatur posisi tombol close */
-.close-btn {
-    position: absolute; /* Ubah posisi menjadi absolute */
-    top: 10px; /* Jarak dari atas */
-    right: 20px; /* Jarak dari kanan */
-    background-color: transparent; /* Transparan untuk tampilan yang lebih bersih */
-    color: #fff; /* Warna tombol */
-    border: none; /* Menghilangkan border */
-    font-size: 24px; /* Ukuran font yang lebih besar untuk tombol */
-    cursor: pointer; /* Menunjukkan bahwa ini bisa diklik */
+#closeCardBtn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Memungkinkan posisi absolut di dalam .info-card */
+    top: 20px; /* Jarak dari sisi atas info-card */
+    right: 20px; /* Jarak dari sisi kanan info-card */
 }
 
-.close-btn:hover {
-    color: rgba(255, 0, 0, 0.8); /* Mengubah warna saat hover */
+#closeCardBtn i {
+    font-size: 18px;
 }
 
-.info-card.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+#closeCardBtn:hover {
+    background-color: #bc2525;
 }
 
 .info-card h1 {
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: 800;
     margin-bottom: 10px;
+}
+
+.info-card h4 {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .info-card ul {
@@ -282,38 +300,451 @@ path:hover {
     margin-bottom: 15px;
 }
 
+#googleMapsBtn {
+    background-color: #4CAF50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut tombol membulat */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    font-size: 16px; /* Ukuran teks tombol */
+    display: inline-flex; /* Mengatur tombol sebagai flexbox agar ikon dan teks sejajar */
+    align-items: center; /* Menyelaraskan ikon dengan teks */
+    transition: background-color 0.3s ease; /* Animasi transisi saat hover */
+}
+
+#googleMapsBtn i {
+    margin-right: 8px; /* Spasi antara ikon dan teks */
+    font-size: 18px; /* Ukuran ikon */
+}
+
+#googleMapsBtn:hover {
+    background-color: #017507; /* Warna latar belakang saat hover */
+}
+
+
+/* style seni */
+
+.wrapper {
+    padding: 10px 10%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    margin-top: 20px;
+    color: #ffc400; /* Warna judul */
+}
+
+#card-area {
+    padding: 50px 0;
+    position: relative;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your needs */
+    grid-gap: 40px; /* Tidak ada gap */
+    margin-top: 30px; /* Margin top untuk jarak atas */
+    padding: 100px;
+}
+
+/* Variasi Box */
+
+/* Box Besar */
+.box-large {
+    grid-column: span 2; /* Memperpanjang 2 kolom */
+    grid-row: span 2; /* Memperpanjang 2 baris */
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Sedang */
+.box-medium {
+    grid-column: span 1;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Kecil */
+.box-small {
+    grid-column: span 1;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* Box Panjang */
+.box-wide {
+    grid-column: span 2;
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+/* BOX LANDSCAPE */
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* BOX PORTRAIT */
+.box-potrait {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    height: auto; /* Mengatur tinggi otomatis untuk konten */
+}
+
+.box img {
+    width: 100%;
+    height: 100%; /* Mengatur tinggi otomatis untuk gambar */
+    display: block;
+    object-fit: cover; /* Cropping the image to fit the box */
+    transition: transform 0.5s;
+}
+
+/* Image inside Potrait Box */
+.box-potrait img {
+    width: 100%;
+    height: 100%; /* Mengatur tinggi otomatis untuk gambar potrait */
+    display: block;
+    object-fit: cover; /* This ensures the landscape image is cropped to fit portrait box */
+    transition: transform 0.5s;
+}
+
+.overlay {
+    width: 100%;
+    height: 0px;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.overlay h3 {
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 20%;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan tulisan */
+}
+
+.overlay p {
+    margin: 10px;
+    font-size: 13px;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 50px;
+}
+
+/* Menyesuaikan overlay untuk box-medium */
+.box-medium .overlay h3 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-top: 10%; /* Sesuaikan margin atas */
+}
+
+.box-medium .overlay p {
+    font-size: 13px; /* Ukuran font untuk deskripsi */
+    margin: 5px 10px; /* Sesuaikan margin */
+}
+
+.box-medium .overlay a {
+    font-size: 12px; /* Ukuran font untuk link */
+    padding: 4px 10px; /* Sesuaikan padding */
+}
+
+/* Hover Effects */
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box-potrait:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover .overlay, .box-potrait:hover .overlay {
+    height: 100%;
+}
+
+/* style batik */
+
+.container-batik {
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Pusatkan galeri dan judul */
+}
+
+.judul-batik {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 30px; /* Jarak bawah untuk memisahkan dari galeri */
+    padding: 20px; /* Tambahkan padding untuk ruang di dalam elemen */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.judul-batik h1 {
+    font-size: 3rem; /* Ukuran font untuk judul */
+    margin: 0 0 10px; /* Jarak bawah untuk judul */
+    color: #ffc400; /* Warna judul */
+    font-family: mo;
+}
+
+.judul-batik p {
+    font-size: 1.2em; /* Ukuran font untuk paragraf */
+    margin: 0; /* Hilangkan margin */
+    color: #ffffff; /* Warna teks paragraf */
+    line-height: 1.5; /* Jarak antar baris */
+}
+
+.gallery {
+    display: grid; /* Menggunakan grid untuk tata letak */
+    grid-template-columns: repeat(1, 1fr); /* Satu kolom */
+    grid-template-rows: repeat(3, auto); /* Tiga baris vertikal */
+    gap: 20px; /* Jarak antar card */
+    width: 80%; /* Atur lebar galeri sesuai kebutuhan */
+}
+
+.item {
+    display: flex; /* Menggunakan flex untuk mengatur gambar dan info */
+    flex-direction: row; /* Mengatur item menjadi baris */
+    align-items: center; /* Pusatkan isi item secara vertikal */
+    background-color: #ffffff0a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(116, 116, 116, 0.562);
+}
+
+.item img {
+    width: 200px; /* Lebar gambar */
+    height: 200px; /* Tinggi gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    border-radius: 20px;
+}
+
+.info {
+    flex: 1; /* Membuat info mengambil sisa ruang yang tersedia */
+}
+
+.info h3 {
+    margin: 0 0 10px; /* Jarak bawah untuk judul informasi */
+    font-size: 30px; /* Ukuran font untuk judul informasi */
+    font-family: Poppins, sans-serif; /* Font untuk judul */
+    font-weight: 800; /* Berat font untuk judul */
+    text-align: left; /* Pusatkan teks judul */
+    color: #fff; /* Warna judul informasi */
+}
+
+.info p {
+    margin: 0; /* Hilangkan margin */
+    color: #ffffff; /* Warna teks informasi */
+}
+
+
+
 
 /* tampilan mobile */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+    .judul {
+        padding: 20px;
+        height: 100vh;
+        /* tetap 100% dari tinggi viewport */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* Agar teks di tengah */
+        background-size: cover;
+        /* Menyesuaikan ukuran latar belakang */
+        overflow-x: hidden;
+        /* Mencegah scroll horizontal */
+        background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
+        background-size: cover;
+        /* Agar latar belakang menutupi seluruh area */
+        background-position: center;
+        /* Posisikan latar belakang di tengah */
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
     .slider {
-        position: absolute;
-        inset: 40px 40px 200px 40px;
+        inset: 60px 20px 60px 20px;
+        /* Memperkecil slider agar lebih pas */
+    }
+
+    .judul h1 {
+        font-size: 40px;
+        /* Mengurangi ukuran font judul */
+    }
+
+    .judul p {
+        font-size: 18px;
+        /* Mengurangi ukuran font paragraf */
+    }
+
+    .slider {
+        inset: 60px 150px 60px 60px;
+        /* Memperkecil slider */
     }
 
     .slider .slides {
-        width: 100px;
-        height: 100px;
-        top: initial;
-        bottom: -170px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 240px;
+        height: 320px;
+        background: var(--img);
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+        box-shadow: 0 2px 50px rgba(116, 116, 116, 0.562);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
     }
 
-    .slider .slides:nth-child(1) .slider .slides:nth-child(2) {
-        top: initial;
-        bottom: opx;
+    .buttons {
+        transform: translateY(300px);
+        /* Menggeser tombol */
     }
 
-
-    .slider .slides:nth-child(3) {
-        left: o;
+    .info-card {
+        left: 0;
+        /* Menempatkan card di tengah secara horizontal */
+        right: 0;
+        /* Menempatkan card di tengah secara horizontal */
+        margin: 0 auto;
+        /* Untuk memusatkan card */
+        bottom: 200px;
+        /* Menggeser posisi card */
+        max-width: 90%;
+        /* Menggunakan lebar maksimal 90% dari layar */
     }
 
-    .slider .slides:nth-child(4) {
-        left: 120px;
+    .judul-peta {
+        left: 0;
+        /* Menempatkan judul peta di tengah */
+        right: 0;
+        /* Menempatkan judul peta di tengah */
+        bottom: 200px;
+        /* Menggeser posisi judul peta */
+        font-size: 40px;
+        /* Mengurangi ukuran font */
+        text-align: center;
+        /* Agar teks di tengah */
     }
 
-    .slider .slides:nth-child(5) {
-        left: 240px;
+    svg {
+        width: 90%;
+        /* Mengurangi ukuran peta menjadi 90% dari lebar viewport */
+        height: auto;
+        /* Membiarkan tinggi menyesuaikan secara proporsional */
+    }
+}
+
+@media (max-width: 768px) {
+    .judul {
+        padding: 10px;
+        height: auto;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        /* Agar teks berada di tengah */
+    }
+
+    .judul h1 {
+        font-size: 30px;
+        /* Ukuran font yang lebih kecil */
+    }
+
+    .judul p {
+        font-size: 16px;
+        bottom: 0;
+        /* Menghapus margin bawah */
+    }
+
+    .slider {
+        inset: 40px 20px 40px 20px;
+        /* Memperkecil slider */
+    }
+
+    .buttons {
+        transform: translateY(250px);
+        /* Menggeser tombol ke atas */
+    }
+
+    .info-card {
+        left: 0;
+        right: 0;
+        bottom: 200px;
+        margin: 0 10px;
+        /* Margin di kiri dan kanan untuk memberi ruang */
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .judul-peta {
+        left: 20px;
+        bottom: 150px;
+        font-size: 40px;
+    }
+
+    svg {
+        width: 300px;
+        /* Ukuran peta lebih kecil */
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .judul h1 {
+        font-size: 24px;
+    }
+
+    .judul p {
+        font-size: 14px;
+    }
+
+    .slider {
+        inset: 20px 10px 20px 10px;
+        /* Ukuran slider yang lebih kecil */
+    }
+
+    .info-card {
+        padding: 10px;
+        font-size: 14px;
+        bottom: 150px;
+    }
+
+    .judul-peta {
+        left: 10px;
+        bottom: 100px;
+        font-size: 30px;
+    }
+
+    svg {
+        width: 250px;
+        /* Ukuran peta lebih kecil */
+        height: 250px;
     }
 }
