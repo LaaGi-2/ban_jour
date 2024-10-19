@@ -866,7 +866,7 @@ path:hover {
         position: absolute;
         align-self: center;
         top: 85%;
-        left: 0;
+        left: 50%;
         right: 0;
         /* Margin di kiri dan kanan untuk memberi ruang */
         width: 90%;
@@ -891,7 +891,7 @@ path:hover {
     position: absolute;
     align-self: center;
     top: 80%;
-    left: 0;    
+    left: 50%;    
     right: 0;
     margin: 0 10px;
     /* Margin di kiri dan kanan untuk memberi ruang */
