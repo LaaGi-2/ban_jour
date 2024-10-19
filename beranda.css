@@ -607,17 +607,17 @@ path:hover {
 }
 
 .info-card {
-    top: 2780px;
-    left: 500px;
-    /* Menempatkan card di tengah secara horizontal */
+    position: absolute;
+    align-self: center;
+    top: 80%;
+    left: 65%;
     right: 0;
-    /* Menempatkan card di tengah secara horizontal */
-    margin: 0 auto;
-    /* Untuk memusatkan card */
-    bottom: 200px;
-    /* Menggeser posisi card */
+    margin: 0 10px;
+    /* Margin di kiri dan kanan untuk memberi ruang */
+    max-width: 100%;
+    transform: translateX(-50%); 
     height: 12%;
-    /* Menggunakan lebar maksimal 90% dari layar */
+    padding: 15px;
 }
 
 
