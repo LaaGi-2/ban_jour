@@ -869,7 +869,7 @@ path:hover {
         left: 0;
         right: 0;
         /* Margin di kiri dan kanan untuk memberi ruang */
-        width: 100%;
+        width: 90%;
         height: 8%;
         padding: 15px;
     }
