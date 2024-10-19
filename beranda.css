@@ -19,6 +19,7 @@ body {
     background-color: #111;
     /* Hanya warna latar belakang */
     overflow-x: hidden;
+    touch-action: manipulation;
     /* Mencegah scroll horizontal */
 }
 
@@ -220,7 +221,7 @@ section.preview{
     position: relative;
     width: 500px;
     height: 500px;
-    left: 150px;
+    left: 16%;
 }
 
 path {
@@ -249,8 +250,6 @@ path:hover {
     background-color: rgba(68, 61, 75, 0.368);
     box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2);
     border-radius: 15px;
-    display: none; /* Tetap disembunyikan saat tidak digunakan */
-    position: absolute; /* Menggunakan posisi absolut */
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -608,7 +607,7 @@ path:hover {
 }
 
 .info-card {
-    top: 2800px;
+    top: 2780px;
     left: 500px;
     /* Menempatkan card di tengah secara horizontal */
     right: 0;
@@ -780,7 +779,7 @@ path:hover {
     .item p{
         text-align: justify;
     }
-    
+
     .slider {
         position: absolute;
         display: flex;

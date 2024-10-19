@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BanyuwangiJourney</title>
     <link rel="stylesheet" href="beranda.css">
@@ -158,6 +158,7 @@
         </div>
         <?xml version="1.0" encoding="utf-8" standalone="no"?>
         <!-- Creator: Esri ArcMap 10.3.0.4322 -->
+         <div class="flex">
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg width="999.75118pt" height="999.75118pt" viewBox="0 0 999.75118 999.75118"
             enable-background="new 0 0 999.75118 999.75118" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -6215,7 +6216,8 @@
             </button>
         </div>
         </div>
-
+    </div>
+        <div style="height: 90px;"></div>
         <section id="kesenian">
             <div style="height: 40px;"></div>
         <div id="card-area">
@@ -6519,7 +6521,19 @@
             </div>
         </section>
         </section>
-
+        <footer class="bg-gray-800 text-white ">
+            <div class="p-10 mx-auto flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="#beranda" class="hover:text-gray-400">Beranda</a>
+                <a href="#potensi" class="hover:text-gray-400">Potensi</a>
+                <a href="#map" class="hover:text-gray-400">Peta</a>
+                <a href="#kesenian" class="hover:text-gray-400">Budaya & kesenian</a>
+                <a href="#destinasi" class="hover:text-gray-400">Destinasi</a>
+              </div>
+              <p class="text-sm">&copy; 2024 BanyuwangiJourney. All rights reserved.</p>
+            </div>
+          </footer>
+          
 </body>
 <script>
     // Data kecamatan
@@ -6758,6 +6772,19 @@
         let slides = document.querySelectorAll('.slides');
         slider.prepend(slides[slides.length - 1]);
     })
+    document.addEventListener('keydown', function(event) {
+        // Mencegah Ctrl + '+' atau Ctrl + '='
+        if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '=')) {
+            event.preventDefault();
+        }
+        // Mencegah Ctrl + '-'
+        if ((event.ctrlKey || event.metaKey) && event.key === '-') {
+            event.preventDefault();
+        }
+    });
+    window.addEventListener('resize', function() {
+    document.body.style.zoom = "100%"; // Mengatur zoom kembali ke 100%
+});
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="navbar.js"></script>
