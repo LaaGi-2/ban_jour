@@ -865,7 +865,7 @@ path:hover {
     .info-card {
         position: absolute;
         align-self: center;
-        top: 80%;
+        top: 85%;
         left: 0;
         right: 0;
         /* Margin di kiri dan kanan untuk memberi ruang */
