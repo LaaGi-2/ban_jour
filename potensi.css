@@ -107,7 +107,7 @@ section#potensi {
 @media (max-width: 768px) {
     section#potensi {
         width: 100%;
-        height: 200vh;
+        height: 236vh;
         display: flex;
         align-items: center;
         justify-content: center;

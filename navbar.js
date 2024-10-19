@@ -27,7 +27,7 @@ function createNavbar() {
             <div class="hidden lg:flex lg:gap-x-6">
                 <a href="#beranda" class="nav-link text-sm font-semibold leading-6 text-white">Beranda</a>
                 <a href="#potensi" class="nav-link text-sm font-semibold leading-6 text-white">Potensi</a>
-                <a href="#map" class="nav-link text-sm font-semibold leading-6 text-white">Map</a>
+                <a href="#map" class="nav-link text-sm font-semibold leading-6 text-white">Peta</a>
                 <div class="relative inline-block text-left">
                     <div>
                         <button id="menu-button" type="button"
@@ -46,16 +46,10 @@ function createNavbar() {
                         class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden"
                         role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
                         <div class="py-1" role="none">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1">Kesenian</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1">Wisata</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1">Kuliner</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1">Budaya</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
-                                tabindex="-1">Karya Seni</a>
+                            <a href="#kesenian" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                tabindex="-1">Budaya & Kesenian</a>
+                            <a href="#destinasi" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                tabindex="-1">Destinasi</a>
                         </div>
                     </div>
                 </div>
@@ -87,15 +81,18 @@ function createNavbar() {
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <a href="#"
+                            <a href="#beranda"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Beranda</a>
-                            <a href="#"
+                            <a href="#potensi"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Potensi</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Map</a>
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Keberagaman</a>
-                        </div>
+                            <a href="#map"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Peta</a>
+                            <a href="#kesenian"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Budaya & Kesenian</a>
+                            <a href="#destinasi"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Destinasi</a>
+                        
+                            </div>
 
                     </div>
                 </div>

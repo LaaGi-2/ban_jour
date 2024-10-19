@@ -47,6 +47,10 @@ body {
     /* Mencegah pengulangan background */
 }
 
+section.preview{
+    height: 110vh;
+}
+
 .judul h1 {
     position: relative;
     font-size: 50px;
@@ -207,7 +211,7 @@ body {
 }
 
 /* style map */
-.banyuwangi-map {
+#map.banyuwangi-map {
     height: 100vh;
     width: 100%;
 }
@@ -216,7 +220,6 @@ body {
     position: relative;
     width: 500px;
     height: 500px;
-    top: 150px;
     left: 150px;
 }
 
@@ -231,17 +234,12 @@ path:hover {
     cursor: pointer;
 }
 
-.judul-peta {
-    position: relative;
-}
 
 .judul-peta h1 {
     color: #ffc400;
+    text-align:center;
     /* Warna judul */
     font-size: 70px;
-    position: relative;
-    left: 660px;
-    bottom: 350px;
     font-weight: 500;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -256,9 +254,9 @@ path:hover {
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    left: 43%; /* Menempatkan di tengah horizontal */
+    left: 50%; /* Menempatkan di tengah horizontal */
     transform: translateX(-50%); /* Menggeser agar benar-benar berada di tengah secara horizontal */
-    top: calc(80% + 20px); /* Menempatkan info-card di bawah judul, sesuaikan jarak jika perlu */
+    top: calc(77%); /* Menempatkan info-card di bawah judul, sesuaikan jarak jika perlu */
     z-index: 1; /* Memastikan berada di atas elemen lain */
 }
 
@@ -609,6 +607,19 @@ path:hover {
     /* Warna teks informasi */
 }
 
+.info-card {
+    top: 2800px;
+    left: 500px;
+    /* Menempatkan card di tengah secara horizontal */
+    right: 0;
+    /* Menempatkan card di tengah secara horizontal */
+    margin: 0 auto;
+    /* Untuk memusatkan card */
+    bottom: 200px;
+    /* Menggeser posisi card */
+    height: 12%;
+    /* Menggunakan lebar maksimal 90% dari layar */
+}
 
 
 
@@ -698,6 +709,7 @@ path:hover {
         bottom: 200px;
         /* Menggeser posisi card */
         max-width: 90%;
+        height: 12%;
         /* Menggunakan lebar maksimal 90% dari layar */
     }
 
@@ -749,7 +761,28 @@ path:hover {
         /* Menghapus margin bawah */
     }
 
+    .item {
+        display: flex;
+        /* Menggunakan flex untuk mengatur gambar dan info */
+        flex-direction: column;
+        justify-content: center;
+        /* Mengatur item menjadi baris */
+        align-items: center;
+        /* Pusatkan isi item secara vertikal */
+        background-color: #ffffff0a;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(116, 116, 116, 0.562);
+    }
+    .item h3{
+        text-align: center;
+    }
+    .item p{
+        text-align: justify;
+    }
+    
     .slider {
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -759,9 +792,6 @@ path:hover {
 
     
     .slider .slides {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         width: 110px;
         height: 200px;
         background: var(--img);
@@ -781,50 +811,64 @@ path:hover {
         display: flex;
         gap: 460px;
     }
-
+    .banyuwangi-map svg {
+        max-width: 480px;
+        left: 100px;
+    }
     .info-card {
+        position: absolute;
+        align-self: center;
+        top: 3870px;
         left: 0;
         right: 0;
-        bottom: 200px;
         margin: 0 10px;
         /* Margin di kiri dan kanan untuk memberi ruang */
         max-width: 100%;
+        height: 12%;
         padding: 15px;
     }
 
-    .judul-peta {
-        left: 20px;
-        bottom: 150px;
-        font-size: 40px;
+    .judul-peta h1 {
+        color: #ffc400;
+        text-align:center;
+        /* Warna judul */
+        font-size: 50px;
+        font-weight: 500;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-
-    svg {
-        width: 300px;
-        /* Ukuran peta lebih kecil */
-        height: 300px;
-    }
+   
 }
 
 @media (max-width: 560px) {
+    .container-beranda {
+        position: relative;
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
     .judul {
         text-align: center;
     }
 
-    .judul h1 {
-        font-size: 30px;
-        /* Ukuran font yang lebih kecil */
+    .judul-peta h1 {
+        color: #ffc400;
+        text-align:center;
+        /* Warna judul */
+        font-size: 40px;
+        font-weight: 300;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
     .judul p {
-        font-size: 16px;
         bottom: 0;
         /* Menghapus margin bawah */
     }
 
     .slider {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         inset: 20px 20px 20px 20px;
         /* Memperkecil slider */
     }
@@ -838,12 +882,14 @@ path:hover {
     }
 
     .info-card {
+        position: absolute;
+        align-self: center;
+        top: 3850px;
         left: 0;
         right: 0;
-        bottom: 200px;
-        margin: 0 10px;
         /* Margin di kiri dan kanan untuk memberi ruang */
         max-width: 100%;
+        height: 12%;
         padding: 15px;
     }
 
@@ -853,9 +899,27 @@ path:hover {
         font-size: 40px;
     }
 
-    svg {
-        width: 300px;
-        /* Ukuran peta lebih kecil */
-        height: 300px;
+    .banyuwangi-map svg {
+        max-width: 400px;
+        left: 40px;
     }
+}
+
+@media (max-width: 460px) {
+.info-card {
+    position: absolute;
+    align-self: center;
+    top: 3650px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
+    /* Margin di kiri dan kanan untuk memberi ruang */
+    max-width: 100%;
+    height: 12%;
+    padding: 15px;
+}
+.banyuwangi-map svg {
+    max-width: 300px;
+    left: 30px;
+}
 }
