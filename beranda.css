@@ -610,12 +610,11 @@ path:hover {
     position: absolute;
     align-self: center;
     top: 80%;
-    left: 65%;
+    left:50%;
     right: 0;
-    margin: 0 10px;
+    margin: 10px;
     /* Margin di kiri dan kanan untuk memberi ruang */
-    max-width: 100%;
-    transform: translateX(-50%); 
+    width: 70%;
     height: 12%;
     padding: 15px;
 }
@@ -800,14 +799,13 @@ path:hover {
     }
     .info-card {
         position: absolute;
-        align-self: center;
-        top: 90%;
-        left: 0;
+        top: 82%;
+        left: 16%;
         right: 0;
         margin: 0 10px;
         /* Margin di kiri dan kanan untuk memberi ruang */
         max-width: 100%;
-        height: 12%;
+        height: 8%;
         padding: 15px;
     }
 
