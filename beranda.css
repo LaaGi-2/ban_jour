@@ -23,7 +23,7 @@ body {
 }
 
 /* style judul */
-.judul {
+.container-beranda {
     position: relative;
     padding: 40px;
     margin-left: 0;
@@ -38,7 +38,7 @@ body {
     /* Menempatkan judul dan teks di tengah secara vertikal */
     align-items: flex-start;
     /* Menempatkan elemen di sebelah kiri */
-    background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
+    background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/highlandtrail.jpg');
     background-size: cover;
     /* Agar background menutupi seluruh area */
     background-position: center;
@@ -72,7 +72,7 @@ body {
 /* style slider */
 .container {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -208,7 +208,8 @@ body {
 
 /* style map */
 .banyuwangi-map {
-    position: relative;
+    height: 100vh;
+    width: 100%;
 }
 
 .banyuwangi-map svg {
@@ -230,8 +231,9 @@ path:hover {
     cursor: pointer;
 }
 
-.judul-peta h1{
-    color: #ffc400; /* Warna judul */
+.judul-peta h1 {
+    color: #ffc400;
+    /* Warna judul */
     font-size: 70px;
     position: relative;
     left: 660px;
@@ -247,7 +249,8 @@ path:hover {
     box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2);
     border-radius: 15px;
     display: none;
-    position: relative; /* Menjadikan posisi elemen relatif agar tombol bisa diposisikan absolut di dalamnya */
+    position: relative;
+    /* Menjadikan posisi elemen relatif agar tombol bisa diposisikan absolut di dalamnya */
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -267,9 +270,12 @@ path:hover {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: absolute; /* Memungkinkan posisi absolut di dalam .info-card */
-    top: 20px; /* Jarak dari sisi atas info-card */
-    right: 20px; /* Jarak dari sisi kanan info-card */
+    position: absolute;
+    /* Memungkinkan posisi absolut di dalam .info-card */
+    top: 20px;
+    /* Jarak dari sisi atas info-card */
+    right: 20px;
+    /* Jarak dari sisi kanan info-card */
 }
 
 #closeCardBtn i {
@@ -301,25 +307,38 @@ path:hover {
 }
 
 #googleMapsBtn {
-    background-color: #4CAF50; /* Warna latar belakang tombol */
-    color: white; /* Warna teks tombol */
-    padding: 10px 20px; /* Padding di dalam tombol */
-    border: none; /* Menghilangkan border */
-    border-radius: 5px; /* Membuat sudut tombol membulat */
-    cursor: pointer; /* Mengubah kursor menjadi pointer */
-    font-size: 16px; /* Ukuran teks tombol */
-    display: inline-flex; /* Mengatur tombol sebagai flexbox agar ikon dan teks sejajar */
-    align-items: center; /* Menyelaraskan ikon dengan teks */
-    transition: background-color 0.3s ease; /* Animasi transisi saat hover */
+    background-color: #4CAF50;
+    /* Warna latar belakang tombol */
+    color: white;
+    /* Warna teks tombol */
+    padding: 10px 20px;
+    /* Padding di dalam tombol */
+    border: none;
+    /* Menghilangkan border */
+    border-radius: 5px;
+    /* Membuat sudut tombol membulat */
+    cursor: pointer;
+    /* Mengubah kursor menjadi pointer */
+    font-size: 16px;
+    /* Ukuran teks tombol */
+    display: inline-flex;
+    /* Mengatur tombol sebagai flexbox agar ikon dan teks sejajar */
+    align-items: center;
+    /* Menyelaraskan ikon dengan teks */
+    transition: background-color 0.3s ease;
+    /* Animasi transisi saat hover */
 }
 
 #googleMapsBtn i {
-    margin-right: 8px; /* Spasi antara ikon dan teks */
-    font-size: 18px; /* Ukuran ikon */
+    margin-right: 8px;
+    /* Spasi antara ikon dan teks */
+    font-size: 18px;
+    /* Ukuran ikon */
 }
 
 #googleMapsBtn:hover {
-    background-color: #017507; /* Warna latar belakang saat hover */
+    background-color: #017507;
+    /* Warna latar belakang saat hover */
 }
 
 
@@ -337,7 +356,8 @@ path:hover {
     margin-bottom: 20px;
     font-weight: 800;
     margin-top: 20px;
-    color: #ffc400; /* Warna judul */
+    color: #ffc400;
+    /* Warna judul */
 }
 
 #card-area {
@@ -347,9 +367,12 @@ path:hover {
 
 .box-area {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your needs */
-    grid-gap: 40px; /* Tidak ada gap */
-    margin-top: 30px; /* Margin top untuk jarak atas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Adjust based on your needs */
+    grid-gap: 40px;
+    /* Tidak ada gap */
+    margin-top: 30px;
+    /* Margin top untuk jarak atas */
     padding: 100px;
 }
 
@@ -357,27 +380,33 @@ path:hover {
 
 /* Box Besar */
 .box-large {
-    grid-column: span 2; /* Memperpanjang 2 kolom */
-    grid-row: span 2; /* Memperpanjang 2 baris */
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
+    grid-column: span 2;
+    /* Memperpanjang 2 kolom */
+    grid-row: span 2;
+    /* Memperpanjang 2 baris */
+    height: auto;
+    /* Mengatur tinggi otomatis untuk konten */
 }
 
 /* Box Sedang */
 .box-medium {
     grid-column: span 1;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
+    height: auto;
+    /* Mengatur tinggi otomatis untuk konten */
 }
 
 /* Box Kecil */
 .box-small {
     grid-column: span 1;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
+    height: auto;
+    /* Mengatur tinggi otomatis untuk konten */
 }
 
 /* Box Panjang */
 .box-wide {
     grid-column: span 2;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
+    height: auto;
+    /* Mengatur tinggi otomatis untuk konten */
 }
 
 /* BOX LANDSCAPE */
@@ -394,23 +423,28 @@ path:hover {
     position: relative;
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
+    height: auto;
+    /* Mengatur tinggi otomatis untuk konten */
 }
 
 .box img {
     width: 100%;
-    height: 100%; /* Mengatur tinggi otomatis untuk gambar */
+    height: 100%;
+    /* Mengatur tinggi otomatis untuk gambar */
     display: block;
-    object-fit: cover; /* Cropping the image to fit the box */
+    object-fit: cover;
+    /* Cropping the image to fit the box */
     transition: transform 0.5s;
 }
 
 /* Image inside Potrait Box */
 .box-potrait img {
     width: 100%;
-    height: 100%; /* Mengatur tinggi otomatis untuk gambar potrait */
+    height: 100%;
+    /* Mengatur tinggi otomatis untuk gambar potrait */
     display: block;
-    object-fit: cover; /* This ensures the landscape image is cropped to fit portrait box */
+    object-fit: cover;
+    /* This ensures the landscape image is cropped to fit portrait box */
     transition: transform 0.5s;
 }
 
@@ -437,7 +471,8 @@ path:hover {
     margin-top: 20%;
     font-size: 30px;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan tulisan */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Bayangan tulisan */
 }
 
 .overlay p {
@@ -459,18 +494,24 @@ path:hover {
 
 /* Menyesuaikan overlay untuk box-medium */
 .box-medium .overlay h3 {
-    font-size: 24px; /* Ukuran font untuk judul */
-    margin-top: 10%; /* Sesuaikan margin atas */
+    font-size: 24px;
+    /* Ukuran font untuk judul */
+    margin-top: 10%;
+    /* Sesuaikan margin atas */
 }
 
 .box-medium .overlay p {
-    font-size: 13px; /* Ukuran font untuk deskripsi */
-    margin: 5px 10px; /* Sesuaikan margin */
+    font-size: 13px;
+    /* Ukuran font untuk deskripsi */
+    margin: 5px 10px;
+    /* Sesuaikan margin */
 }
 
 .box-medium .overlay a {
-    font-size: 12px; /* Ukuran font untuk link */
-    padding: 4px 10px; /* Sesuaikan padding */
+    font-size: 12px;
+    /* Ukuran font untuk link */
+    padding: 4px 10px;
+    /* Sesuaikan padding */
 }
 
 /* Hover Effects */
@@ -482,7 +523,8 @@ path:hover {
     transform: scale(1.1);
 }
 
-.box:hover .overlay, .box-potrait:hover .overlay {
+.box:hover .overlay,
+.box-potrait:hover .overlay {
     height: 100%;
 }
 
@@ -490,44 +532,66 @@ path:hover {
 
 .container-batik {
     display: flex;
-    flex-direction: column; /* Menyusun elemen secara vertikal */
-    align-items: center; /* Pusatkan galeri dan judul */
+    flex-direction: column;
+    /* Menyusun elemen secara vertikal */
+    align-items: center;
+    /* Pusatkan galeri dan judul */
 }
 
 .judul-batik {
-    text-align: center; /* Pusatkan teks */
-    margin-bottom: 30px; /* Jarak bawah untuk memisahkan dari galeri */
-    padding: 20px; /* Tambahkan padding untuk ruang di dalam elemen */
-    border-radius: 10px; /* Sudut membulat */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    text-align: center;
+    /* Pusatkan teks */
+    margin-bottom: 30px;
+    /* Jarak bawah untuk memisahkan dari galeri */
+    padding: 20px;
+    /* Tambahkan padding untuk ruang di dalam elemen */
+    border-radius: 10px;
+    /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan */
 }
 
 .judul-batik h1 {
-    font-size: 3rem; /* Ukuran font untuk judul */
-    margin: 0 0 10px; /* Jarak bawah untuk judul */
-    color: #ffc400; /* Warna judul */
+    font-size: 3rem;
+    /* Ukuran font untuk judul */
+    margin: 0 0 10px;
+    /* Jarak bawah untuk judul */
+    color: #ffc400;
+    /* Warna judul */
     font-family: mo;
 }
 
 .judul-batik p {
-    font-size: 1.2em; /* Ukuran font untuk paragraf */
-    margin: 0; /* Hilangkan margin */
-    color: #ffffff; /* Warna teks paragraf */
-    line-height: 1.5; /* Jarak antar baris */
+    font-size: 1.2em;
+    /* Ukuran font untuk paragraf */
+    margin: 0;
+    /* Hilangkan margin */
+    color: #ffffff;
+    /* Warna teks paragraf */
+    line-height: 1.5;
+    /* Jarak antar baris */
 }
 
 .gallery {
-    display: grid; /* Menggunakan grid untuk tata letak */
-    grid-template-columns: repeat(1, 1fr); /* Satu kolom */
-    grid-template-rows: repeat(3, auto); /* Tiga baris vertikal */
-    gap: 20px; /* Jarak antar card */
-    width: 80%; /* Atur lebar galeri sesuai kebutuhan */
+    display: grid;
+    /* Menggunakan grid untuk tata letak */
+    grid-template-columns: repeat(1, 1fr);
+    /* Satu kolom */
+    grid-template-rows: repeat(3, auto);
+    /* Tiga baris vertikal */
+    gap: 20px;
+    /* Jarak antar card */
+    width: 80%;
+    /* Atur lebar galeri sesuai kebutuhan */
 }
 
 .item {
-    display: flex; /* Menggunakan flex untuk mengatur gambar dan info */
-    flex-direction: row; /* Mengatur item menjadi baris */
-    align-items: center; /* Pusatkan isi item secara vertikal */
+    display: flex;
+    /* Menggunakan flex untuk mengatur gambar dan info */
+    flex-direction: row;
+    /* Mengatur item menjadi baris */
+    align-items: center;
+    /* Pusatkan isi item secara vertikal */
     background-color: #ffffff0a;
     border-radius: 20px;
     overflow: hidden;
@@ -535,28 +599,40 @@ path:hover {
 }
 
 .item img {
-    width: 200px; /* Lebar gambar */
-    height: 200px; /* Tinggi gambar */
-    margin-right: 20px; /* Jarak antara gambar dan teks */
+    width: 200px;
+    /* Lebar gambar */
+    height: 200px;
+    /* Tinggi gambar */
+    margin-right: 20px;
+    /* Jarak antara gambar dan teks */
     border-radius: 20px;
 }
 
 .info {
-    flex: 1; /* Membuat info mengambil sisa ruang yang tersedia */
+    flex: 1;
+    /* Membuat info mengambil sisa ruang yang tersedia */
 }
 
 .info h3 {
-    margin: 0 0 10px; /* Jarak bawah untuk judul informasi */
-    font-size: 30px; /* Ukuran font untuk judul informasi */
-    font-family: Poppins, sans-serif; /* Font untuk judul */
-    font-weight: 800; /* Berat font untuk judul */
-    text-align: left; /* Pusatkan teks judul */
-    color: #fff; /* Warna judul informasi */
+    margin: 0 0 10px;
+    /* Jarak bawah untuk judul informasi */
+    font-size: 30px;
+    /* Ukuran font untuk judul informasi */
+    font-family: Poppins, sans-serif;
+    /* Font untuk judul */
+    font-weight: 800;
+    /* Berat font untuk judul */
+    text-align: left;
+    /* Pusatkan teks judul */
+    color: #fff;
+    /* Warna judul informasi */
 }
 
 .info p {
-    margin: 0; /* Hilangkan margin */
-    color: #ffffff; /* Warna teks informasi */
+    margin: 0;
+    /* Hilangkan margin */
+    color: #ffffff;
+    /* Warna teks informasi */
 }
 
 
@@ -565,30 +641,39 @@ path:hover {
 /* tampilan mobile */
 
 @media (max-width: 1024px) {
-    .judul {
-        padding: 20px;
+    .container-beranda {
+        width: 100vw;
         height: 100vh;
-        /* tetap 100% dari tinggi viewport */
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
+    }
+    
+    .judul {
         text-align: center;
-        /* Agar teks di tengah */
-        background-size: cover;
-        /* Menyesuaikan ukuran latar belakang */
-        overflow-x: hidden;
-        /* Mencegah scroll horizontal */
-        background-image: linear-gradient(to top, #111, rgba(0, 0, 0, 0)), url('images/background-pantai-banyuwangi.jpg');
-        background-size: cover;
-        /* Agar latar belakang menutupi seluruh area */
-        background-position: center;
-        /* Posisikan latar belakang di tengah */
-        background-repeat: no-repeat;
-        position: relative;
     }
 
     .slider {
         inset: 60px 20px 60px 20px;
         /* Memperkecil slider agar lebih pas */
+    }
+    .slider .slides {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 220px;
+        height: 300px;
+        background: var(--img);
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px;
+        transition: 0.5s;
+        box-shadow: 0 2px 50px rgba(116, 116, 116, 0.562);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
     }
 
     .judul h1 {
@@ -625,6 +710,7 @@ path:hover {
 
     .buttons {
         transform: translateY(300px);
+
         /* Menggeser tombol */
     }
 
@@ -663,13 +749,19 @@ path:hover {
 }
 
 @media (max-width: 768px) {
+    .container-beranda {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
     .judul {
-        padding: 10px;
-        height: auto;
-        justify-content: flex-start;
-        align-items: center;
         text-align: center;
-        /* Agar teks berada di tengah */
+    /* Agar teks berada di tengah */
     }
 
     .judul h1 {
@@ -684,13 +776,36 @@ path:hover {
     }
 
     .slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         inset: 40px 20px 40px 20px;
         /* Memperkecil slider */
     }
 
+    
+    .slider .slides {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 110px;
+        height: 200px;
+        background: var(--img);
+        background-position: center;
+        background-size: cover;
+        transition: 0.5s;
+        box-shadow: 0 2px 50px rgba(116, 116, 116, 0.562);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
     .buttons {
         transform: translateY(250px);
-        /* Menggeser tombol ke atas */
+        transform: translateZ(100px);
+        width: 100%;
+        display: flex;
+        gap: 460px;
     }
 
     .info-card {
@@ -716,35 +831,57 @@ path:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+    .judul {
+        text-align: center;
+    }
+
     .judul h1 {
-        font-size: 24px;
+        font-size: 30px;
+        /* Ukuran font yang lebih kecil */
     }
 
     .judul p {
-        font-size: 14px;
+        font-size: 16px;
+        bottom: 0;
+        /* Menghapus margin bawah */
     }
 
     .slider {
-        inset: 20px 10px 20px 10px;
-        /* Ukuran slider yang lebih kecil */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 20px 20px 20px 20px;
+        /* Memperkecil slider */
+    }
+
+    .buttons {
+        transform: translateY(250px);
+        transform: translateZ(100px);
+        width: 100%;
+        display: flex;
+        gap: 300px;
     }
 
     .info-card {
-        padding: 10px;
-        font-size: 14px;
-        bottom: 150px;
+        left: 0;
+        right: 0;
+        bottom: 200px;
+        margin: 0 10px;
+        /* Margin di kiri dan kanan untuk memberi ruang */
+        max-width: 100%;
+        padding: 15px;
     }
 
     .judul-peta {
-        left: 10px;
-        bottom: 100px;
-        font-size: 30px;
+        left: 20px;
+        bottom: 150px;
+        font-size: 40px;
     }
 
     svg {
-        width: 250px;
+        width: 300px;
         /* Ukuran peta lebih kecil */
-        height: 250px;
+        height: 300px;
     }
 }

@@ -7,21 +7,100 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BanyuwangiJourney</title>
     <link rel="stylesheet" href="beranda.css">
+    <link rel="stylesheet" href="potensi.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
     <div id="navbar-container"></div>
 
-    <div class="judul">
-        <h1>BANYUWANGI JOURNEY</h1>
-        <p>KENALI DAN JELAJAHI BANYUWANGI</p>
-    </div>
+    <section id="beranda">
+        <div class="container-beranda">
+            <div class="judul">
+                <h1>BANYUWANGI JOURNEY</h1>
+                <p>KENALI DAN JELAJAHI BANYUWANGI</p>
+            </div>
+        </div>
+    </section>
+    <section id="potensi">
+        <div class="card-potensi-container">
+            <div class="card-potensi card-1 group">
+                <div class="relative z-10 flex-1">
+                    <h3 class="title-potensi">BUDAYA DAN SENI</h3>
+                    <p class="description">Kebudayaan dan seni di Banyuwangi menjadi daya tarik unik bagi wisatawan,
+                        dengan
+                        keanekaragaman tari, musik tradisional, dan upacara adat yang telah dikenal dan diapresiasi.</p>
+                </div>
+                <div class="icon-potensi-container relative z-10">
+                    <span
+                        class="grid h-20 w-20 place-items-center rounded-full bg-orange-400 text-black transition-all duration-300 icon-potensi">
+                        <i class="ri-quill-pen-line" style="font-size: 36px;"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-potensi card-2 group">
+                <div class="relative z-10 flex-1">
+                    <h3 class="title-potensi">PARIWISATA</h3>
+                    <p class="description">Pariwisata di Banyuwangi dikenal luas
+                        di dunia internasional. Destinasi seperti Gunung Ijen, Pulau Merah menarik banyak
+                        wisatawan lokal dan mancanegara. Letak strategis dan akses mudah menjadi keunggulan pariwisata
+                        di
+                        Banyuwangi.</p>
+                </div>
+                <div class="icon-potensi-container relative z-10">
+                    <span
+                        class="grid h-20 w-20 place-items-center rounded-full bg-yellow-400  text-black transition-all duration-300 icon-potensi">
+                        <i class="ri-compass-3-line" style="font-size: 40px;"></i>
+                        
+
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-potensi card-3 group">
+                <div class="relative z-10 flex-1">
+                    <h3 class="title-potensi">PERIKANAN DAN KELAUTAN</h3>
+                    <p class="description">Wilayah yang berbatasan laut menjadikan sektor perikanan dan kelautan sebagai
+                        potensi
+                        besar bagi Banyuwangi, mendukung perekonomian dan menjadi sumber mata pencaharian utama bagi
+                        masyarakat
+                        pesisir.</p>
+                </div>
+                <div class="icon-potensi-container relative z-10">
+                    <span
+                        class="grid h-20 w-20 place-items-center rounded-full bg-sky-400 text-black transition-all duration-300 icon-potensi">
+                        <img src="fish.svg">
+                    </span>
+                </div>
+            </div>
+
+            <div class="card-potensi card-4 group">
+                <div class="relative z-10 flex-1">
+                    <h3 class="title-potensi">PERTANIAN DAN PERKEBUNAN</h3>
+                    <p class="description">Sektor perkebunan di Banyuwangi menjadi potensi unggulan, terutama untuk
+                        agrowisata.
+                        Selain menarik wisatawan, sektor ini juga mendukung perekonomian masyarakat pedesaan.</p>
+                </div>
+                <div class="icon-potensi-container relative z-10">
+                    <span
+                        class="grid h-20 w-20 place-items-center rounded-full bg-green-400 text-black transition-all duration-300 icon-potensi">
+                        <i class="ri-seedling-line" style="font-size: 34px;"></i></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id=""></section>
+
     <div class="container">
         <div class="slider">
             <div class="slides" style="--img: url('images/img1.jpg')">
@@ -62,7 +141,7 @@
             </div>
         </div>
     </div>
-    <div class="banyuwangi-map">
+    <section id="map" class="banyuwangi-map">
         <?xml version="1.0" encoding="utf-8" standalone="no"?>
         <!-- Creator: Esri ArcMap 10.3.0.4322 -->
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -6266,27 +6345,34 @@
                 <img src="images/karyaseni/gajaholing.jpeg" alt="Image 1">
                 <div class="info">
                     <h3>Batik Gajah Oling</h3>
-                    <p>Batik Gajah Oling merupakan motif batik tertua diantara motif batik yang dimliki Kota Banyuwangi. Motif Batik Gajah Oling ini berbentuk tanda Tanya “ ? “ yang menyerupai seperti belalai gajah. Dan Batik Gajah ling ini adalah batik yang menjadi ciri khas dari Banyuwangi</p>
+                    <p>Batik Gajah Oling merupakan motif batik tertua diantara motif batik yang dimliki Kota Banyuwangi.
+                        Motif Batik Gajah Oling ini berbentuk tanda Tanya “ ? “ yang menyerupai seperti belalai gajah.
+                        Dan Batik Gajah ling ini adalah batik yang menjadi ciri khas dari Banyuwangi</p>
                 </div>
             </div>
             <div class="item">
                 <img src="images/karyaseni/batikkopipecah.jpeg" alt="Image 2">
                 <div class="info">
                     <h3>Batik Kopi Pecah</h3>
-                    <p>Kopi Pecah merupakan salah satu motif klasik batik Banyuwangi. Di setiap motifnya, batik Banyuwangi ada filosofi yang ingin diangkat. Seperti halnya, motif kopi pecah ini yang menggambarkan tema pengorbanan. "Biji kopi harus dipecah atau dihancurkan, agar bisa dinikmati.</p>
+                    <p>Kopi Pecah merupakan salah satu motif klasik batik Banyuwangi. Di setiap motifnya, batik
+                        Banyuwangi ada filosofi yang ingin diangkat. Seperti halnya, motif kopi pecah ini yang
+                        menggambarkan tema pengorbanan. "Biji kopi harus dipecah atau dihancurkan, agar bisa dinikmati.
+                    </p>
                 </div>
             </div>
             <div class="item">
                 <img src="images/karyaseni/BatikKangkungSetingkes2.jpg" alt="Image 3">
                 <div class="info">
                     <h3>Batik Kangkung Setingkes</h3>
-                    <p>Batik Kangkung Setingkes merupakan salah satu motif batik Banyuwangi. Motif batik ini bergambar sayuran kangkung yang diikat dalam sebuah tali, yang bermakna pentingnya sebuah kerukunan dalam hidup berumah tangga.</p>
+                    <p>Batik Kangkung Setingkes merupakan salah satu motif batik Banyuwangi. Motif batik ini bergambar
+                        sayuran kangkung yang diikat dalam sebuah tali, yang bermakna pentingnya sebuah kerukunan dalam
+                        hidup berumah tangga.</p>
                 </div>
             </div>
             <!-- Tambahkan lebih banyak item sesuai kebutuhan -->
         </div>
     </div>
-    
+
 </body>
 <script>
     // Data kecamatan
@@ -6528,5 +6614,6 @@
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="navbar.js"></script>
+<script src="script.js"></script>
 
 </html>

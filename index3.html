@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards with Hover Effect</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .card-potensi-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-potensi {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background-color: black;
+            border: 1px solid #4B5563;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s, background-image 0.3s, opacity 0.3s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-potensi:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
+        }
+
+        .card-1:hover {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/kesenian/gandrungpotrait.jpeg');
+        }
+
+        .card-2:hover {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/wisata/img2.jpg');
+        }
+
+        .card-3:hover {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/perikanan.jpg');
+        }
+
+        .card-4:hover {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/perkebunan.jpg');
+        }
+
+        .icon-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 10px;
+            width: 80px;
+            height: 80px;
+            transition: transform 0.1s ease, opacity 0.1s ease;
+            margin-bottom: 4px;
+        }
+
+        .icon {
+            transition: opacity 0.1s ease, transform 0.1s ease;
+            position: relative;
+            transform: translateY(-5px);
+        }
+
+        .group:hover .icon {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .group:hover .icon-container {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        .title-potensi {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .description {
+            color: white;
+            text-align: justify;
+            transition: transform 0.3s ease;
+            line-height: 1.2;
+        }
+
+        .group:hover .title-potensi,
+        .group:hover .description {
+            transform: translateY(-10px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .card-potensi-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-potensi:hover {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+                /* Remove transform effect on mobile */
+            }
+
+            .group:hover .icon {
+                opacity: 1; /* Keep icon visible on hover */
+                transform: none; /* No transformation */
+            }
+
+            .group:hover .icon-container {
+                opacity: 1; /* Keep icon container visible on hover */
+                transform: none; /* No transformation */
+            }
+
+            .group:hover .title-potensi,
+            .group:hover .description {
+                transform: none; /* No transformation */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <div class="card-potensi-container">
+        <div class="card-potensi card-1 group">
+            <div class="relative z-10 flex-1">
+                <h3 class="title-potensi">BUDAYA DAN SENI</h3>
+                <p class="description">Kebudayaan dan seni di Banyuwangi menjadi daya tarik unik bagi wisatawan, dengan
+                    keanekaragaman tari, musik tradisional, dan upacara adat yang telah dikenal dan diapresiasi.</p>
+            </div>
+            <div class="icon-container relative z-10">
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-orange-400 transition-all duration-300 icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-flower2 h-10 w-10 text-white transition-all" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4m3-12q0 .11-.03.247c-.544.241-1.091.638-1.598 1.084A3 3 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1 1 0 0 1 5 4a3 3 0 0 1 6 0m-.812 6.052A3 3 0 0 0 11 8a3 3 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a7 7 0 0 1-.647-.487m-3.56.617a3 3 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084q.03.137.03.247a3 3 0 1 1-6 0q0-.11.03-.247c.544-.242 1.091-.638 1.598-1.084m-.816-4.721A3 3 0 0 0 5 8c0 .794.308 1.516.812 2.052a7 7 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487M8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="card-potensi card-2 group">
+            <div class="relative z-10 flex-1">
+                <h3 class="title-potensi">PARIWISATA</h3>
+                <p class="description">Pariwisata di Banyuwangi dikenal luas
+                    di dunia internasional. Destinasi seperti Gunung Ijen, Pulau Merah menarik banyak
+                    wisatawan lokal dan mancanegara. Letak strategis dan akses mudah menjadi keunggulan pariwisata di
+                    Banyuwangi.</p>
+            </div>
+            <div class="icon-container relative z-10">
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-yellow-400 transition-all duration-300 icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-compass h-10 w-10 text-white transition-all" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="card-potensi card-3 group">
+            <div class="relative z-10 flex-1">
+                <h3 class="title-potensi">PERIKANAN DAN KELAUTAN</h3>
+                <p class="description">Wilayah yang berbatasan laut menjadikan sektor perikanan dan kelautan sebagai potensi
+                    besar bagi Banyuwangi, mendukung perekonomian dan menjadi sumber mata pencaharian utama bagi masyarakat
+                    pesisir.</p>
+            </div>
+            <div class="icon-container relative z-10">
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-sky-400 transition-all duration-300 icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-fish h-10 w-10 text-white transition-all" viewBox="0 0 16 16">
+                        <path d="M8.5 0C5.7 0 3.2 2.6 2.1 5.1A4.5 4.5 0 0 0 0 8a4.5 4.5 0 0 0 2.1 2.9C3.2 13.4 5.7 16 8.5 16c1.5 0 2.8-.6 3.8-1.6l2.4 2.4a1 1 0 0 0 1.4-1.4l-2.4-2.4C14.9 10.3 16 9 16 8s-1.1-2.3-2.4-3.8L15 1.6a1 1 0 0 0-1.4-1.4l-2.4 2.4C11.3 1.6 10 0 8.5 0zM1 8a3.5 3.5 0 0 1 1.4-2.8c.6.8 1.4 1.2 2.3 1.2 1.2 0 2.1-.6 2.5-1.5A3.5 3.5 0 0 1 8.5 2C10.3 2 11.8 3.3 12 5.1c-.1.3-.3.7-.6.9-.5.3-1.1.5-1.7.5a2.5 2.5 0 0 1-2.5-2.5c0-.6.2-1.2.5-1.7.3-.3.7-.5 1-.6C8.5 4.5 9 4.3 9.5 4c1.2 0 2.4.4 3.1 1 .3.4.5.8.5 1.2s-.2.8-.5 1.1C11.2 8.6 10.1 9 9 9c-.6 0-1.1-.2-1.5-.5-.2-.2-.5-.5-.5-.8s.3-.6.5-.8C8.1 7.2 8.6 7 9 7c.3 0 .6.1.9.3.3.3.5.6.5.9 0 .4-.3.7-.5.9C9.6 8.6 8.9 9 8 9c-.5 0-1-.1-1.4-.3C5.8 8.6 5 8 5 8z" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="card-potensi card-4 group">
+            <div class="relative z-10 flex-1">
+                <h3 class="title-potensi">PERTANIAN DAN PERKEBUNAN</h3>
+                <p class="description">Sektor perkebunan di Banyuwangi menjadi potensi unggulan, terutama untuk agrowisata.
+                    Selain menarik wisatawan, sektor ini juga mendukung perekonomian masyarakat pedesaan.</p>
+            </div>
+            <div class="icon-container relative z-10">
+                <span class="grid h-20 w-20 place-items-center rounded-full bg-green-400 transition-all duration-300 icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="h-10 w-10 text-white transition-all">
+                        <path
+                            d="M5.99805 3C9.48787 3 12.3812 5.55379 12.9112 8.8945C14.0863 7.72389 15.7076 7 17.498 7H21.998V9.5C21.998 13.0899 19.0879 16 15.498 16H12.998V21H10.998V13H8.99805C5.13205 13 1.99805 9.86599 1.99805 6V3H5.99805ZM19.998 9H17.498C15.0128 9 12.998 11.0147 12.998 13.5V14H15.498C17.9833 14 19.998 11.9853 19.998 9.5V9ZM5.99805 5H3.99805V6C3.99805 8.76142 6.23662 11 8.99805 11H10.998V10C10.998 7.23858 8.75947 5 5.99805 5Z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

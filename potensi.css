@@ -1,0 +1,145 @@
+section#beranda {
+    width: 100%;
+    height: 100vh;
+}
+
+section#potensi {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-potensi-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-potensi {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    border: 1px solid #4B5563;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-image 0.3s, opacity 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-potensi:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.card-1:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/kesenian/gandrungpotrait.jpeg');
+}
+
+.card-2:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/wisata/img2.jpg');
+}
+
+.card-3:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/perikanan.jpg');
+}
+
+.card-4:hover {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%), url('images/perkebunan.jpg');
+}
+
+.icon-potensi-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    margin-bottom: 4px;
+}
+
+.icon-potensi {
+    transition: opacity 0.1s ease, transform 0.1s ease;
+    position: relative;
+    transform: translateY(-5px);
+}
+
+.group:hover .icon-potensi {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.group:hover .icon-potensi-container {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.title-potensi {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.description {
+    color: white;
+    text-align: justify;
+    transition: transform 0.3s ease;
+    line-height: 1.2;
+}
+
+.group:hover .title-potensi,
+.group:hover .description {
+    transform: translateY(-10px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section#potensi {
+        width: 100%;
+        height: 200vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-potensi-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-potensi:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        /* Remove transform effect on mobile */
+    }
+
+    .group:hover .icon-potensi {
+        opacity: 1;
+        /* Keep icon-potensi visible on hover */
+        transform: none;
+        /* No transformation */
+    }
+
+    .group:hover .icon-potensi-container {
+        opacity: 1;
+        /* Keep icon-potensi container visible on hover */
+        transform: none;
+        /* No transformation */
+    }
+
+    .group:hover .title-potensi,
+    .group:hover .description {
+        transform: none;
+        /* No transformation */
+    }
+}
