@@ -231,6 +231,10 @@ path:hover {
     cursor: pointer;
 }
 
+.judul-peta {
+    position: relative;
+}
+
 .judul-peta h1 {
     color: #ffc400;
     /* Warna judul */
@@ -242,20 +246,20 @@ path:hover {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* Gaya card */
 .info-card {
     padding: 20px;
     background-color: rgba(68, 61, 75, 0.368);
     box-shadow: 0 4px 8px rgba(178, 178, 178, 0.2);
     border-radius: 15px;
-    display: none;
-    position: relative;
-    /* Menjadikan posisi elemen relatif agar tombol bisa diposisikan absolut di dalamnya */
+    display: none; /* Tetap disembunyikan saat tidak digunakan */
+    position: absolute; /* Menggunakan posisi absolut */
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    left: 650px;
-    margin-top: -350px;
+    left: 43%; /* Menempatkan di tengah horizontal */
+    transform: translateX(-50%); /* Menggeser agar benar-benar berada di tengah secara horizontal */
+    top: calc(80% + 20px); /* Menempatkan info-card di bawah judul, sesuaikan jarak jika perlu */
+    z-index: 1; /* Memastikan berada di atas elemen lain */
 }
 
 #closeCardBtn {
@@ -353,11 +357,9 @@ path:hover {
 
 .wrapper h1 {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-weight: 800;
-    margin-top: 20px;
-    color: #ffc400;
-    /* Warna judul */
+    color: #ffc400; /* Warna judul */
 }
 
 #card-area {
@@ -367,46 +369,40 @@ path:hover {
 
 .box-area {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Adjust based on your needs */
-    grid-gap: 40px;
-    /* Tidak ada gap */
-    margin-top: 30px;
-    /* Margin top untuk jarak atas */
-    padding: 100px;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+    grid-template-rows: repeat(4, 200px); /* Empat baris */
+    grid-gap: 20px; /* Hapus jarak antar box */
+    margin-top: 70px;
 }
 
 /* Variasi Box */
-
 /* Box Besar */
 .box-large {
-    grid-column: span 2;
-    /* Memperpanjang 2 kolom */
-    grid-row: span 2;
-    /* Memperpanjang 2 baris */
-    height: auto;
-    /* Mengatur tinggi otomatis untuk konten */
+    grid-column: span 2; /* Menggunakan 2 kolom */
+    grid-row: span 2; /* Mengisi 2 baris */
+    height: 100%; /* Set height */
+    background-color: #ffc400; /* Warna untuk visualisasi */
 }
 
 /* Box Sedang */
 .box-medium {
-    grid-column: span 1;
-    height: auto;
-    /* Mengatur tinggi otomatis untuk konten */
+    grid-column: span 1; /* Memperpanjang 1 kolom */
+    grid-row: span 2; /* Mengisi 2 baris */
+    height: 100%; /* Set height */
 }
 
 /* Box Kecil */
 .box-small {
-    grid-column: span 1;
-    height: auto;
-    /* Mengatur tinggi otomatis untuk konten */
+    grid-column: span 1; /* Memperpanjang 1 kolom */
+    grid-row: span 1; /* Mengisi 1 baris */
+    height: 100%; /* Set height */
 }
 
-/* Box Panjang */
+/* Box Lebar */
 .box-wide {
-    grid-column: span 2;
-    height: auto;
-    /* Mengatur tinggi otomatis untuk konten */
+    grid-column: span 2; /* Memperpanjang 2 kolom */
+    grid-row: span 1; /* Mengisi 1 baris */
+    height: 100%; /* Set height */
 }
 
 /* BOX LANDSCAPE */
@@ -418,40 +414,19 @@ path:hover {
 }
 
 /* BOX PORTRAIT */
-.box-potrait {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    height: auto;
-    /* Mengatur tinggi otomatis untuk konten */
-}
-
 .box img {
     width: 100%;
-    height: 100%;
-    /* Mengatur tinggi otomatis untuk gambar */
+    height: 100%; /* Mengatur tinggi otomatis untuk gambar */
     display: block;
-    object-fit: cover;
-    /* Cropping the image to fit the box */
+    object-fit: cover; /* Memastikan gambar memenuhi kotak */
     transition: transform 0.5s;
 }
 
-/* Image inside Potrait Box */
-.box-potrait img {
-    width: 100%;
-    height: 100%;
-    /* Mengatur tinggi otomatis untuk gambar potrait */
-    display: block;
-    object-fit: cover;
-    /* This ensures the landscape image is cropped to fit portrait box */
-    transition: transform 0.5s;
-}
-
+/* Overlay */
 .overlay {
     width: 100%;
-    height: 0px;
-    background: linear-gradient(transparent, #1c1c1c 58%);
+    height: 0;
+    background: linear-gradient(transparent, #1c1c1c 60%);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -467,17 +442,15 @@ path:hover {
 
 .overlay h3 {
     font-weight: 800;
-    margin-bottom: 5px;
-    margin-top: 20%;
-    font-size: 30px;
-    letter-spacing: 2px;
+    margin: 10px 0;
+    font-size: 24px;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Bayangan tulisan */
 }
 
 .overlay p {
-    margin: 10px;
-    font-size: 13px;
+    margin: 5px 0;
+    font-size: 14px;
 }
 
 .overlay a {
@@ -489,29 +462,7 @@ path:hover {
     border-radius: 50px;
     text-align: center;
     padding: 5px 15px;
-    margin-bottom: 50px;
-}
-
-/* Menyesuaikan overlay untuk box-medium */
-.box-medium .overlay h3 {
-    font-size: 24px;
-    /* Ukuran font untuk judul */
-    margin-top: 10%;
-    /* Sesuaikan margin atas */
-}
-
-.box-medium .overlay p {
-    font-size: 13px;
-    /* Ukuran font untuk deskripsi */
-    margin: 5px 10px;
-    /* Sesuaikan margin */
-}
-
-.box-medium .overlay a {
-    font-size: 12px;
-    /* Ukuran font untuk link */
-    padding: 4px 10px;
-    /* Sesuaikan padding */
+    margin-bottom: 20px;
 }
 
 /* Hover Effects */
@@ -519,13 +470,24 @@ path:hover {
     transform: scale(1.1);
 }
 
-.box-potrait:hover img {
-    transform: scale(1.1);
+.box:hover .overlay {
+    height: 100%;
 }
 
-.box:hover .overlay,
-.box-potrait:hover .overlay {
-    height: 100%;
+/* Menyesuaikan overlay untuk box-medium */
+.box-medium .overlay h3 {
+    font-size: 22px; /* Ukuran font untuk judul */
+    margin-top: 5%; /* Sesuaikan margin atas */
+}
+
+.box-medium .overlay p {
+    font-size: 12px; /* Ukuran font untuk deskripsi */
+    margin: 5px 10px; /* Sesuaikan margin */
+}
+
+.box-medium .overlay a {
+    font-size: 12px; /* Ukuran font untuk link */
+    padding: 5px 10px; /* Sesuaikan padding */
 }
 
 /* style batik */
@@ -552,14 +514,26 @@ path:hover {
 }
 
 .judul-batik h1 {
-    font-size: 3rem;
-    /* Ukuran font untuk judul */
-    margin: 0 0 10px;
-    /* Jarak bawah untuk judul */
-    color: #ffc400;
-    /* Warna judul */
-    font-family: mo;
-}
+    font-size: 30px; /* Ukuran font besar untuk menonjolkan judul */
+    color: var(--first-color); /* Menggunakan warna utama */
+    text-align: center; /* Posisikan judul di tengah */
+    top: 2rem;
+    margin-bottom: 20px; /* Memberikan ruang di bawah judul */
+    font-weight: bold; /* Membuat teks tebal */
+    text-transform: uppercase; /* Mengubah huruf menjadi kapital */
+    letter-spacing: 2px; /* Menambah spasi antar huruf untuk efek estetika */
+    position: relative;
+    font-family: serif;
+  }
+  
+.judul-batik h1::after {
+    content: "";
+    display: block;
+    width: 100px; /* Lebar garis hiasan */
+    height: 4px; /* Tinggi garis hiasan */
+    background-color: var(--first-color-alt); /* Warna garis */
+    margin: 1rem auto 0 auto; /* Pusatkan garis di bawah judul */
+  }
 
 .judul-batik p {
     font-size: 1.2em;
@@ -581,7 +555,7 @@ path:hover {
     /* Tiga baris vertikal */
     gap: 20px;
     /* Jarak antar card */
-    width: 80%;
+    width: 60%;
     /* Atur lebar galeri sesuai kebutuhan */
 }
 
@@ -614,7 +588,7 @@ path:hover {
 }
 
 .info h3 {
-    margin: 0 0 10px;
+    margin: 0 20px 10px;
     /* Jarak bawah untuk judul informasi */
     font-size: 30px;
     /* Ukuran font untuk judul informasi */
@@ -629,7 +603,7 @@ path:hover {
 }
 
 .info p {
-    margin: 0;
+    margin: 20px;
     /* Hilangkan margin */
     color: #ffffff;
     /* Warna teks informasi */

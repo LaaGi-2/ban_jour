@@ -1,120 +1,125 @@
 <!DOCTYPE html>
-<!-- divinectorweb.com -->
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>CSS Cards with Overlay Hover Animation/title></title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-	<link href="map.css" rel="stylesheet">
-</head>
-<body>
-	<div id="card-area">
-    <div class="wrapper">
-      <h1>SENI DAN BUDAYA BANYUWANGI</h1>
-      <p>Banyuwangi terkenal sebagai daerah yang kental dengan seni dan budayanya, di mana tradisi-tradisi lokal seperti tari Gandrung, seni musik Using, serta berbagai upacara adat masih dilestarikan dengan penuh kebanggaan oleh masyarakat setempat. Beragam kegiatan seni dan budaya ini mencerminkan kekayaan warisan leluhur yang terus hidup dan berkembang di tengah-tengah modernitas.</p>
-      <div class="box-area">
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="box box-large">
-          <img alt="" src="images/kesenian/img3.jpg">
-          <div class="overlay">
-            <h3>Seblang</h3>
-            <p>Seblang adalah tarian mistis yang merupakan bagian dari ritual adat bersih desa dan tolak bala dalam suku Osing, Banyuwangi. Tarian Seblang merupakan tarian mistis yang ditampilkan oleh penari perempuan terpilih dalam keadaan tidak sadar. Penari dipilih secara supranatural oleh tetua adat yang masih memiliki hubungan darah dengan leluhur seblang terdahulu. </p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
 
-        <div class="box box-medium">
-          <img alt="" src="images/kesenian/gandrungpotrait.jpeg">
-          <div class="overlay">
-            <h3>Gandrung</h3>
-            <p>Tari Gandrung adalah tarian tradisional khas Banyuwangi, Jawa Timur yang merupakan perwujudan rasa syukur masyarakat atas hasil panen.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="swiper-bundle.min.css">
 
-        <div class="box box-medium">
-          <img alt="" src="images/kebudayaan/barong kemiren.jpg">
-          <div class="overlay">
-            <h3>Barong Banyuwangi</h3>
-            <p>Barong Banyuwangi adalah kesenian yang merupakan perwujudan kehidupan manusia dan simbol kebersamaan yang disakralkan oleh masyarakat Banyuwangi. Biasanya Barong ini diperlihatkan saat dilaksanakannya upacara Ider Bumi.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="map.css">
 
-        <div class="box box-wide">
-          <img alt="" src="images/kebudayaan/kebokeboan.jpeg">
-          <div class="overlay">
-            <h3>Kebo-keboan</h3>
-            <p>Kebo-keboan adalah upacara adat yang berasal dari Suku Osing di Kabupaten Banyuwangi, Jawa Timur. Dalam upacara ini, para peserta akan mengenakan kostum yang menyerupai kerbau karena hewan ini memiliki peranan penting dalam menggemburkan tanah sehingga menjadi subur.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+      <title>Responsive card slider - Bedimcode</title>
+   </head>
+   <body>
+      <section class="container">
+         <div class="card__container swiper">
+            <div class="card__content">
+               <div class="swiper-wrapper">
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="images/wisata/pulau merah.jpg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Pulau Merah</h3>
+                        <p class="card__description">
+                          Pulau Merah adalah pantai di Banyuwangi, Jawa Timur, yang terkenal dengan pasir putih, bukit kecil berwarna merah, ombak ideal, dan pemandangan suset yang memukau
+                        </p>
+      
+                        <a href="#" class="card__button">lokasi</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="images/wisata/img2.jpg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Kawah Ijen</h3>
+                        <p class="card__description">
+                          Kawah Ijen adalah gunung berapi di Banyuwangi, Jawa Timur, terkenal dengan fenomena api biru dan danau kawah berwarna toska yang mengandung belerang.
+                        </p>
+      
+                        <a href="#" class="card__button">Lokasi</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="images/wisata/watudodol.jpg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Pantai Watu Dodol</h3>
+                        <p class="card__description">
+                          Pantai Watu Dodol adalah pantai di Banyuwangi, Jawa Timur, yang terkenal dengan batu besar di tepi pantai dan pemandangan Selat Bali.
+                        </p>
+      
+                        <a href="#" class="card__button">Lokasi</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="images/wisata/djawatan.jpeg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Djawatan</h3>
+                        <p class="card__description">
+                          Djawatan Benculuk adalah hutan wisata di Banyuwangi, Jawa Timur, terkenal dengan pohon-pohon trembesi raksasa yang menciptakan suasana magis dan teduh.
+                        </p>
+      
+                        <a href="#" class="card__button">Lokasi</a>
+                     </div>
+                  </article>
 
-        <div class="box box-medium">
-          <img alt="" src="images/kesenian/angklung paglak.jpeg">
-          <div class="overlay">
-            <h3>Angklung Paglak</h3>
-            <p>Angklung Paglak adalah kesenian bermusik tradisional yang dilakukan oleh masyarakat Kemiren saat masa bertani.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="images/wisata/alas-purwo-is-one-of.jpg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Alas Purwo</h3>
+                        <p class="card__description">
+                          Alas Purwo adalah taman nasional di Banyuwangi, yang dikenal memiliki keanekaragaman hayati yang kaya, termasuk satwa liar. Alas Purwo juga dianggap sebagai tempat sakral oleh masyarakat setempat.
+                        </p>
+      
+                        <a href="#" class="card__button">Lokasi</a>
+                     </div>
+                  </article>
+               </div>
+            </div>
 
-        <div class="box box-medium">
-          <img alt="" src="images/kesenian/kuntulan.jpg">
-          <div class="overlay">
-            <h3>Kuntulan</h3>
-            <p>Kuntulan adalah tarian tradisional masyarakat Banyuwangi yang memiliki ciri khas gerakan seperti pencak silat, diiringi musik rebana dan kluncing.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-        
-        <div class="box box-large">
-          <img alt="" src="images/kesenian/gandrung sewu.jpg">
-          <div class="overlay">
-            <h3>Gandrung Sewu</h3>
-            <p>Gandrung Sewu merupakan gelaran festival tahunan tari Gandrung kolosal di Kabupaten Banyuwangi.  Acara ini diadakan sejak tahun 2012, yang pada awalnya digelar untuk mengenalkan kebudayaan Banyuwangi khususnya Gandrung ke khalayak luas. Pada saat ini Gandrung Sewu sudah menjadi ikon pariwisata budaya Banyuwangi.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-        <div class="box box-medium">
-          <img alt="" src="images/kesenian/IMG-20170228-WA0000.jpg">
-          <div class="overlay">
-            <h3>Angklung Caruk</h3>
-            <p>Angklung Caruk adalah kesenian khas Banyuwangi yang melibatkan dua kelompok angklung untuk bersaing dalam memainkan angklung.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-        
-        <div class="box box-wide">
-          <img alt="" src="images/kesenian/balipostcom_festival-kuwung-kisahkan-sejarah-janger_01-696x464.jpg">
-          <div class="overlay">
-            <h3>Janger</h3>
-            <p>Janger Banyuwangi adalah kesenian rakyat tradisional yang merupakan perpaduan antara kebudayaan Jawa, Bali, dan Banyuwangi.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+               <i class="ri-arrow-right-s-line"></i>
+            </div>
+            
+            <div class="swiper-button-prev">
+               <i class="ri-arrow-left-s-line"></i>
+            </div>
 
-        <div class="box box-medium">
-          <img alt="" src="images/kebudayaan/puterkayun.jpeg">
-          <div class="overlay">
-            <h3>Puter Kayun</h3>
-            <p>Puter Kayun adalah tradisi napak tilas masyarakat Using Boyolangu, Kecamatan Giri Banyuwangi dengan cara beramai-ramai naik delman.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-        
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+         </div>
+      </section>
+      
+      <!--=============== SWIPER JS ===============-->
+      <script src="js/swiper-bundle.min.js"></script>
 
-        <div class="box box-medium">
-          <img alt="" src="images/kebudayaan/tradisi-petik-laut-di-probolinggo-17jeu-dom.jpg">
-          <div class="overlay">
-            <h3>Petik Laut</h3>
-            <p>Petik laut adalah upacara adat atau ritual yang dilakukan oleh nelayan untuk mengungkapkan rasa syukur dan harapan kepada Tuhan, serta memohon keselamatan dan rezeki.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-
-        <div class="box box-wide">
-          <img alt="" src="images/kebudayaan/tumpengsewu.jpg">
-          <div class="overlay">
-            <h3>Tumpeng Sewu</h3>
-            <p>Tumpeng Sewu adalah tradisi makan bersama dengan menggelar seribu tumpeng di pinggir jalan yang diyakini sebagai warisan adat leluhur.</p><a href="#">Selengkapnya</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</body>
+      <!--=============== MAIN JS ===============-->
+      <script src="js/main.js"></script>
+   </body>
 </html>

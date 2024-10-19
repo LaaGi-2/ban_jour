@@ -1,162 +1,229 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(38, 92%, 58%);
+  --first-color-light: hsl(0, 0%, 35%);
+  --first-color-alt: hsl(0, 0%, 100%);
+  --second-color: hsl(52, 100%, 50%);
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: hsl(212, 4%, 95%);
+  --body-color: #111;
+  --container-color: hsl(0, 0%, 17%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif; 
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background: #1e1f21;
-    color: #fff;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
 }
 
-.wrapper {
-    padding: 10px 10%;
-    text-align: center;
+a {
+  text-decoration: none;
 }
 
-#card-area {
-    padding: 50px 0;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.box-area {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust based on your needs */
-    grid-gap: 40px; /* Tidak ada gap */
-    margin-top: 30px; /* Margin top untuk jarak atas */
-    padding:100px;
-}
-
-/* Variasi Box */
-
-/* Box Besar */
-.box-large {
-    grid-column: span 2; /* Memperpanjang 2 kolom */
-    grid-row: span 2; /* Memperpanjang 2 baris */
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
-}
-
-/* Box Sedang */
-.box-medium {
-    grid-column: span 1;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
-}
-
-/* Box Kecil */
-.box-small {
-    grid-column: span 1;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
-}
-
-/* Box Panjang */
-.box-wide {
-    grid-column: span 2;
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
-}
-
-/* BOX LANDSCAPE */
-.box {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-}
-
-/* BOX PORTRAIT */
-.box-potrait {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    height: auto; /* Mengatur tinggi otomatis untuk konten */
-}
-
-.box img {
-    width: 100%;
-    height: 100%; /* Mengatur tinggi otomatis untuk gambar */
-    display: block;
-    object-fit: cover; /* Cropping the image to fit the box */
-    transition: transform 0.5s;
-}
-
-/* Image inside Potrait Box */
-.box-potrait img {
-    width: 100%;
-    height: 100%; /* Mengatur tinggi otomatis untuk gambar potrait */
-    display: block;
-    object-fit: cover; /* This ensures the landscape image is cropped to fit portrait box */
-    transition: transform 0.5s;
-}
-
-.overlay {
-    width: 100%;
-    height: 0px;
-    background: linear-gradient(transparent,#1c1c1c 58%);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+/*=============== CARD ===============*/
+.container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    bottom: 50px;
+  }
+
+  .judul-wisata h1 {
+    font-size: 30px; /* Ukuran font besar untuk menonjolkan judul */
+    color: var(--first-color); /* Menggunakan warna utama */
+    text-align: center; /* Posisikan judul di tengah */
+    margin-top: 3rem; /* Mengurangi ruang di bawah judul dari 5rem menjadi 3rem */
+    margin-bottom: 1rem; /* Tambahkan margin-bottom untuk memberi sedikit ruang antara judul dan card */
+    font-weight: bold; /* Membuat teks tebal */
+    text-transform: uppercase; /* Mengubah huruf menjadi kapital */
+    letter-spacing: 2px; /* Menambah spasi antar huruf untuk efek estetika */
+    position: relative;
+    font-family: serif;
+}
+  
+  .judul-wisata h1::after {
+    content: "";
+    display: block;
+    width: 100px; /* Lebar garis hiasan */
+    height: 4px; /* Tinggi garis hiasan */
+    background-color: var(--first-color-alt); /* Warna garis */
+    margin: 1rem auto 0 auto; /* Pusatkan garis di bawah judul */
+  }
+  
+  
+  .card__container {
+    padding: 3rem; /* Menyesuaikan padding atas dan bawah pada container kartu jika diperlukan */
+    bottom: 80px;
+    position: relative;
+}
+  
+  .card__content {
+    margin-inline: 1.75rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card__article {
+    width: 300px; /* Keep this for card width */
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+  
+  .card__image {
+    position: relative;
+    background-color: var(--first-color-light);
+    margin-bottom: -.75rem;
+  }
+  
+  .card__data {
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
     text-align: center;
-    transition: height 0.5s;
+    position: relative;
+    z-index: 10;
+    height: auto; /* Keep height consistent across all cards */
+    display: flex; /* Activate flexbox */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Ensure button stays at the bottom */
 }
-.overlay h3 {
-    font-weight: 500;
-    margin-bottom: 5px;
-    margin-top: 20%;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan tulisan */
-}
-
-.overlay p {
-    margin: 10px;
-    font-size: 12px;
-}
-
-.overlay a {
-    margin-top: 10px;
-    color: #262626;
-    text-decoration: none;
+  
+  .card__img {
+    width: 100%; /* Ensure image takes full width of card */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit to card width */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .card__shadow {
+    width: 200px;
+    height: 200px;
+    background-color: var(--first-color-alt);
+    border-radius: 50%;
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    filter: blur(45px);
+  }
+  
+  .card__name {
+    font-size: var(--h2-font-size);
+    color: var(--second-color);
+    margin-bottom: .75rem;
+  }
+  
+  .card__description {
+    flex-grow: 1; /* Allow description to take up available space */
+    margin-bottom: 1rem; /* Adjust bottom margin for spacing */
     font-size: 14px;
-    background: #fff;
-    border-radius: 50px;
-    text-align: center;
-    padding: 5px 15px;
-    margin-bottom: 50px;
+    max-height: 100px;
+}
+.card__button {
+    display: inline-block;
+    background-color: var(--first-color);
+    padding: .75rem 1.5rem;
+    border-radius: .25rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-top: 40px; /* Keep button at the bottom */
+    align-self: center; /* Center the button horizontally */
 }
 
-/* Menyesuaikan overlay untuk box-medium */
-.box-medium .overlay h3 {
-    font-size: 24px; /* Ukuran font untuk judul */
-    margin-top: 10%; /* Sesuaikan margin atas */
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
 }
 
-.box-medium .overlay p {
-    font-size: 13px; /* Ukuran font untuk deskripsi */
-    margin: 5px 10px; /* Sesuaikan margin */
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
 }
 
-.box-medium .overlay a {
-    font-size: 12px; /* Ukuran font untuk link */
-    padding: 4px 10px; /* Sesuaikan padding */
+.swiper-button-prev {
+  left: 0;
 }
 
-
-/* Hover Effects */
-.box:hover img {
-    transform: scale(1.1);
+.swiper-button-next {
+  right: 0;
 }
 
-.box-potrait:hover img {
-    transform: scale(1.1);
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
 }
 
-.box:hover .overlay, .box-potrait:hover .overlay {
-    height: 100%;
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
 }
