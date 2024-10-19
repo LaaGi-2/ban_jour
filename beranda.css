@@ -253,9 +253,9 @@ path:hover {
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    left: 50%; /* Menempatkan di tengah horizontal */
+    left: 50%;
+    top: 70%; /* Menempatkan di tengah horizontal */
     transform: translateX(-50%); /* Menggeser agar benar-benar berada di tengah secara horizontal */
-    top: calc(77%); /* Menempatkan info-card di bawah judul, sesuaikan jarak jika perlu */
     z-index: 1; /* Memastikan berada di atas elemen lain */
 }
 
@@ -698,20 +698,6 @@ path:hover {
         /* Menggeser tombol */
     }
 
-    .info-card {
-        left: 0;
-        /* Menempatkan card di tengah secara horizontal */
-        right: 0;
-        /* Menempatkan card di tengah secara horizontal */
-        margin: 0 auto;
-        /* Untuk memusatkan card */
-        bottom: 200px;
-        /* Menggeser posisi card */
-        max-width: 90%;
-        height: 12%;
-        /* Menggunakan lebar maksimal 90% dari layar */
-    }
-
     .judul-peta {
         left: 0;
         /* Menempatkan judul peta di tengah */
@@ -724,13 +710,11 @@ path:hover {
         text-align: center;
         /* Agar teks di tengah */
     }
-
-    svg {
-        width: 90%;
-        /* Mengurangi ukuran peta menjadi 90% dari lebar viewport */
-        height: auto;
-        /* Membiarkan tinggi menyesuaikan secara proporsional */
+    .banyuwangi-map svg {
+        max-width: 480px;
+        left: 100px;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -817,13 +801,13 @@ path:hover {
     .info-card {
         position: absolute;
         align-self: center;
-        top: 3870px;
+        top: 4800px;
         left: 0;
         right: 0;
         margin: 0 10px;
         /* Margin di kiri dan kanan untuk memberi ruang */
         max-width: 100%;
-        height: 12%;
+        height: 7%;
         padding: 15px;
     }
 
@@ -883,12 +867,12 @@ path:hover {
     .info-card {
         position: absolute;
         align-self: center;
-        top: 3850px;
+        top: 4000px;
         left: 0;
         right: 0;
         /* Margin di kiri dan kanan untuk memberi ruang */
         max-width: 100%;
-        height: 12%;
+        height: 8%;
         padding: 15px;
     }
 
@@ -908,13 +892,13 @@ path:hover {
 .info-card {
     position: absolute;
     align-self: center;
-    top: 3650px;
+    top: 3900px;
     left: 0;
     right: 0;
     margin: 0 10px;
     /* Margin di kiri dan kanan untuk memberi ruang */
     max-width: 100%;
-    height: 12%;
+    min-height: 8%;
     padding: 15px;
 }
 .banyuwangi-map svg {

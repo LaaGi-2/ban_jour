@@ -107,10 +107,10 @@ section#potensi {
 @media (max-width: 768px) {
     section#potensi {
         width: 100%;
-        height: 236vh;
+        height: 200vh;
         display: flex;
-        align-items: center;
         justify-content: center;
+        padding-bottom: 15vh;
     }
 
     .card-potensi-container {
@@ -141,5 +141,23 @@ section#potensi {
     .group:hover .description {
         transform: none;
         /* No transformation */
+    }
+}
+@media (max-width: 560px) {
+    section#potensi {
+        width: 100%;
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50vh;
+    }
+}
+@media (max-width: 460px) {
+    section#potensi {
+        width: 100%;
+        height: 130vh;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50vh;
     }
 }
