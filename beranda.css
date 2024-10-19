@@ -253,9 +253,7 @@ path:hover {
     max-width: 600px;
     color: #fff;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    left: 50%;
     top: 70%; /* Menempatkan di tengah horizontal */
-    transform: translateX(-50%); /* Menggeser agar benar-benar berada di tengah secara horizontal */
     z-index: 1; /* Memastikan berada di atas elemen lain */
 }
 
@@ -800,7 +798,7 @@ path:hover {
     .info-card {
         position: absolute;
         top: 90%;
-        left: 50%;
+        left: 14%;
         right: 0;
         margin: 0 10px;
         /* Margin di kiri dan kanan untuk memberi ruang */
@@ -866,7 +864,7 @@ path:hover {
         position: absolute;
         align-self: center;
         top: 85%;
-        left: 40%;
+        left: 14%;
         right: 0;
         /* Margin di kiri dan kanan untuk memberi ruang */
         width: 90%;
@@ -891,7 +889,7 @@ path:hover {
     position: absolute;
     align-self: center;
     top: 80%;
-    left: 50%;    
+    left: 14%;    
     right: 0;
     margin: 0 10px;
     /* Margin di kiri dan kanan untuk memberi ruang */
